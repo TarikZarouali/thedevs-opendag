@@ -1,0 +1,28 @@
+:root{
+    --clr-neutral-900: hsl(207, 19%, 9%);
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-neutral-400: hsl(142, 90%, 61%);
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    line-height: 1.6;
+    background: #13181c;
+    font-family: sans-serif;
+}
+
+.card{
+    color:var(--clr-neutral-100);
+    background-image: url(img/systems_and_devices.jpg);
+    background-size: cover;
+    padding: 8rem 0 0;
+    
+
+}
