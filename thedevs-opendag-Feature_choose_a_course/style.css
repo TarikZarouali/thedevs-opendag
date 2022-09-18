@@ -6,9 +6,8 @@
 }
 
 
-*::before,
-*::after {
-    box-sizing: border-box;
+h1{
+    color: white;
 }
 
 body{
@@ -17,65 +16,52 @@ body{
     line-height: 1.6;
     background: var(--clr-neutral-900);
     font-family: sans-serif;
-    
+    min-height: 100vh;
+    justify-items: center;
 }
+
 
 .card{
     color:var(--clr-neutral-100);
     background-image: url(img/systems_and_devices.jpg);
     background-size: cover;
     padding: 10rem 0 0;
-    max-width: 35ch;
+    max-width: 19rem;
+    max-height: 20rem;
     border-radius: 0.5rem;
-    overflow: hidden;
     transition: transform 500ms ease;
-    display: grid;
-    align-items: start;
-    justify-items: center;
-}
-.card:hover {
-    transform: scale(1.05);
-}
-.card-content {
-    --padding: 1.5rem;
-    padding: var(--padding);
-    background: linear-gradient(
-        hsl(0 0% 0% / 0),
-        hsl(20 0% 0% / 0.3) 20%,
-        hsl(0 0% 0% /1)
-    );
-    transform: translateY(65%);
-    transition: transform 500ms ease;
+    margin-right: 5px;
    
 }
 
-.card:hover .card-content{
-    transform: translateY(0%);
-    transition-delay: 500ms;
+.card-content{
+    --padding: 1.5rem;
+    padding: var(--padding);
+    background: linear-gradient(
+        rgba(0, 4, 255, 0),
+        rgb(0, 0, 0) 30%,
+        rgb(0, 0, 0)
+    );
+    transform: translateY(65%);
 }
 
-.card-content > *:not(.card-title){
-    opacity: 0;
-    transition: opacity 500ms linear;
+.card:hover{
+    transform: scale(1.05);
 }
 
-.card:hover .card-content > *:not(.card-title){
-    opacity: 1;
-    transition-delay: 1000ms;
-}
 .card-title{
     position: relative;
     width: max-content;
-    
 }
+
 .card-title::after{
     content: "";
     position: absolute;
     height: 4px;
     left: calc(var(--padding) * -1);
-    bottom: -2px;
-    width: calc(100% +var(--padding));
-    background: var(--clr-accent-400);
+    bottom: 0;
+    width: calc(100% + var(--padding));
+    background: rgb(42, 52, 150);
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 500ms ease;
@@ -85,20 +71,19 @@ body{
     transform: scaleX(1);
 }
 
-.card-body{
-    color: rgb(255, 255, 255 / 0.85);
-}
 .button{
     cursor: pointer;
-    display: inline-block;
+    display: inline;
     text-decoration: none;
-    color: var(--clr-neutral-900);
-    background: var(--clr-accent-400);
+    color: rgb(255, 255, 255);
+    background-color:  rgb(42, 52, 150);
     padding: 0.5em 1.25em;
-    border-radius: 0.25em;
+    border-radius: 0.5em;
 }
 
 .button:hover,
-.button-focus{
-    background-color: var(--clr-neutral-100);
+.button:focus{
+    background-color:  rgb(42, 52, 150);
 }
+
+
