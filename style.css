@@ -1,0 +1,89 @@
+/* custom property color */
+:root{
+    --clr-neutral-900: hsl(207, 19%, 9%);
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-accent-400: hsl(142, 90%, 61%);
+}
+
+
+h1{
+    color: white;
+}
+
+body{
+    display: grid;
+    min-height: 100vh;
+    line-height: 1.6;
+    background: var(--clr-neutral-900);
+    font-family: sans-serif;
+    min-height: 100vh;
+    justify-items: center;
+}
+
+
+.card{
+    color:var(--clr-neutral-100);
+    background-image: url(img/systems_and_devices.jpg);
+    background-size: cover;
+    padding: 10rem 0 0;
+    max-width: 19rem;
+    max-height: 20rem;
+    border-radius: 0.5rem;
+    transition: transform 500ms ease;
+    margin-right: 5px;
+   
+}
+
+.card-content{
+    --padding: 1.5rem;
+    padding: var(--padding);
+    background: linear-gradient(
+        rgba(0, 4, 255, 0),
+        rgb(0, 0, 0) 30%,
+        rgb(0, 0, 0)
+    );
+    transform: translateY(65%);
+}
+
+.card:hover{
+    transform: scale(1.05);
+}
+
+.card-title{
+    position: relative;
+    width: max-content;
+}
+
+.card-title::after{
+    content: "";
+    position: absolute;
+    height: 4px;
+    left: calc(var(--padding) * -1);
+    bottom: 0;
+    width: calc(100% + var(--padding));
+    background: rgb(42, 52, 150);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 500ms ease;
+}
+
+.card:hover .card-title::after{
+    transform: scaleX(1);
+}
+
+.button{
+    cursor: pointer;
+    display: inline;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background-color:  rgb(42, 52, 150);
+    padding: 0.5em 1.25em;
+    border-radius: 0.5em;
+}
+
+.button:hover,
+.button:focus{
+    background-color:  rgb(42, 52, 150);
+}
+
+
