@@ -10,14 +10,14 @@
     <title>SkateRoom</title>
 </head>
 
-<body>
+<body class="home">
 
     <header>
 
         <a href="#" class="logo">MboUtrecht</a>
 
         <nav class="navbar">
-            <a class="active" href="Landingpage.php">home</a>
+            <a class="active" href="index.php">home</a>
 
         </nav>
 
