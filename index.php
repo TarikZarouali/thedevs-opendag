@@ -1,5 +1,4 @@
 <html>
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,8 +16,10 @@
         <a href="#" class="logo">MboUtrecht</a>
 
         <nav class="navbar">
-            <a class="active" href="index.php">home</a>
-
+           <ul> <li><a class="active" href="index.php">home</a></li>
+                <li><a href="register.php">Registreer</a></li>
+                <li><a href="login.php">Log in</a></li>
+        </ul>
         </nav>
 
 
@@ -100,3 +101,7 @@
         </div>
 
     </footer>
+
+
+    </body>
+</html>
