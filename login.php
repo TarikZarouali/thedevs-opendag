@@ -4,7 +4,7 @@ session_start();
  
 // Checks if the user is already logged in, if yes then redirect him to home page
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    header("location: loggedin.php");
+    header("location: welcome.php");
     exit;
 }
  
@@ -92,7 +92,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <meta charset="UTF-8">
     <title>Log in</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body class="form">
