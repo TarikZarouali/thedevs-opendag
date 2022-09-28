@@ -1,4 +1,36 @@
-<h1><strong>MBO Utrecht</strong></h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <a href="index.php" class="logo">MboUtrecht</a>
+
+     <nav>
+         <ul>
+             <li><a href="index.php">home</a></li>
+             <li><a href="course.html">courses</a></li>
+             <li><a href="">informatie</a>
+         <ul>
+             <li><a href="about.php">about</a></li>
+             <li><a href="contact.php">contact</a></li>
+        </ul>
+             <li><a href="">registreren?</a>
+         <ul>
+             <li><a href="register.php">registreer</a></li>
+             <li><a href="login.php">Login</a></li>
+        </ul>
+    </ul>
+     </nav>
+ </header>
+
+
+ <h1><strong>MBO Utrecht</strong></h1>
 
 <p>
     <strong>
@@ -21,3 +53,5 @@
 
 <h4>Over MBO Utrecht</h4>
 <p>MBO Utrecht is een kleinschalige, interconfessionele onderwijsinstelling die doelmatig onderwijs aanbiedt met focus op de hoogste niveaus van het mbo. We bieden met ca. 500 medewerkers ruim <a href="https://www.mboutrecht.nl/opleidingen/" target="_blank" rel="noopener noreferrer">50 mbo-opleidingen</a> aan ongeveer 5.000 studenten, in uiteenlopende de&nbsp;domeinen van het mbo-onderwijs.</p>
+</body>
+</html>

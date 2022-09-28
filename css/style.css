@@ -607,3 +607,138 @@ body.form {
 .welkom {
     padding: 1.5rem;
 }
+
+
+  .projectcard-text{
+      min-height: 8em;
+  }
+  section{
+      width: 100%;
+      height: auto;
+      color: #fff;
+      position: relative;
+      background-size: 300% 300%;
+      animation: change 4s ease-in-out infinite;
+      
+      
+       }
+      
+      
+       @keyframes change {
+           0%{
+      
+             background-position: 0 50%;
+      
+       }
+           
+           50%{
+      
+             background-position: 100% 50%;
+       }
+           100%{
+      
+             background-position: 0% 50%;
+      
+           }
+       }    
+  
+       h5.projectcard-title{
+           color: black;
+           font-size: 3rem;
+           text-shadow: 1px 1px 2px black;
+  
+       }
+       p.projectcard-text{
+           color: rgb(0, 0, 0);
+           text-shadow: 0 0 3px #ffffff, 0 0 3px #000000;
+           font-size: 1.5rem;
+       }
+       .projectcard{
+          box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+          background: rgb(203, 203, 209);  
+          margin-top: 1.5rem;
+     }
+  
+     .projectheader{
+         padding: 1%;
+         text-align:center;
+         background:#0080BE;
+         box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+        
+     }
+     h1.projecttext1{
+         color: white;
+         text-shadow: rgb(0, 0, 0) 1px 0 5px;
+         font-size:4rem;
+         font-style:monospace;
+         
+     }
+     p.projecttext2{
+         color: ivory;
+         text-shadow: 1px 1px 2px black;
+         font-size: 3rem;
+  
+     }
+  
+     #projectcontainer-header{
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+  }
+  
+  
+  @keyframes anim9{
+      from{
+          right:-100%;
+      }
+      to{
+          right:0%;
+      }
+    }
+  
+    #projectcontainer-box{
+      position: relative;
+      left:-100%;
+      animation: anim3 1s forwards 0.5s;
+      font-family: monospace;
+      overflow: hidden;
+      
+      }
+      
+      @keyframes anim3{
+          form{
+              left:-100%;
+          }
+          to{
+              left:0%
+          }
+      }
+      
+      .wrapper {
+          height: 10vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        
+        .typing-demo {
+          width: 52ch;
+          animation: typing 5s steps(40), blink .10s step-end infinite alternate;
+          white-space: nowrap;
+          overflow: hidden;
+          border-right: 1px solid;
+          font-family: monospace;
+          font-size: 2em;
+        }
+        
+        @keyframes typing {
+          from {
+            width: 0
+          }
+        }
+            
+        @keyframes blink {
+          50% {
+            border-color: transparent
+          }
+        }

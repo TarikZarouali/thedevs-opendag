@@ -14,7 +14,7 @@
 
 
     <header>
-        <a href="#" class="logo">MboUtrecht</a>
+        <a href="index.php" class="logo">MboUtrecht</a>
 
      <nav>
          <ul>
@@ -90,7 +90,7 @@
 
     <footer>
         <div class="footer-content">
-            <h3> © 2021 MBO Utrecht :</h3>
+            <h3> © 2022 MBO Utrecht :</h3>
             <p>MboUtrecht.nl</p>
             <ul class="socials">
                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
