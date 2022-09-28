@@ -6,24 +6,34 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/grid.css">
     <title>Opendag Mbo Utrecht</title>
 </head>
 
 <body class="home">
 
-    <header>
 
+    <header>
         <a href="#" class="logo">MboUtrecht</a>
 
-        <nav class="navbar">
-           <ul> <li><a class="active" href="index.php">home</a></li>
-                <li><a href="register.php">Registreer</a></li>
-                <li><a href="login.php">Log in</a></li>
+     <nav>
+         <ul>
+             <li><a href="index.php">home</a></li>
+             <li><a href="course.html">courses</a></li>
+             <li><a href="">informatie</a>
+         <ul>
+             <li><a href="about.php">about</a></li>
+             <li><a href="contact.php">contact</a></li>
         </ul>
-        </nav>
+             <li><a href="">registreren?</a>
+         <ul>
+             <li><a href="register.php">registreer</a></li>
+             <li><a href="login.php">Login</a></li>
+        </ul>
+    </ul>
+     </nav>
+ </header>
 
-
-    </header>
 
 
     <div id="section-landing">
