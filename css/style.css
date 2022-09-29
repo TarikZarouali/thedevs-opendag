@@ -27,6 +27,11 @@ h1 {
     color: white;
 }
 
+.softwareh1
+{
+    color: #000;
+}
+
 /* navbar */
 header {
     position: fixed;
@@ -651,6 +656,45 @@ body.form {
          box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
         
      }
+
+     .projectcard {
+        /* Add shadows to create the "card" effect */
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        max-width: 35rem;
+        text-align: center;
+        margin: 5rem;
+        border-radius: 1.5rem;
+        padding: 3rem;
+      }
+      
+      /* On mouse-over, add a deeper shadow */
+      .projectcard:hover {
+        box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.4);
+        transform: scale(1.1);
+      }
+      
+      /* Add some padding inside the card container */
+    
+      .projectrow
+      {
+        margin: 0 -5px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    
+      .projectrow::after
+      {
+        content: "";
+        display: flex;
+        clear: both;
+      }
+      .project.column
+      {
+        width: 25%;
+        padding: 0 10px;
+      }
      h1.projecttext1{
          color: white;
          text-shadow: rgb(0, 0, 0) 1px 0 5px;
@@ -726,4 +770,12 @@ body.form {
           50% {
             border-color: transparent
           }
+
         }
+/* softwaredevpage */
+        .software-dev
+        {
+            margin-top: 10rem;
+        }
+
+        
