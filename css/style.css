@@ -4,7 +4,7 @@
     --clr-neutral-100: hsl(0, 0%, 100%);
     --clr-accent-400: hsl(234, 100%, 50%);
 }
-
+/* standaard styling */
 html,
 body.home {
     height: 100%;
@@ -17,12 +17,9 @@ body.home {
 
 
 body.course {
-    display: grid;
     min-height: 100vh;
     line-height: 1.6;
-    background: var(--clr-neutral-900);
-    font-family: sans-serif;
-    min-height: 100vh;
+    font-family: monospace;
     justify-items: center;
 }
 
@@ -30,6 +27,7 @@ h1 {
     color: white;
 }
 
+/* navbar */
 header {
     position: fixed;
     top: 0;
@@ -127,8 +125,7 @@ header nav ul > li > ul >li > a{
 
 
 
-
-
+/* logo styling */
 header .icons i,
 header .icons a {
     cursor: pointer;
@@ -150,6 +147,7 @@ header .icons a:hover {
     transform: rotate(360deg);
 }
 
+/* banner */
 #section-landing {
     background: url('../img/banner.jpg');
     background-size: cover;
@@ -527,58 +525,45 @@ iframe {
     height: 40rem;
 }
 
-.card {
-    color: var(--clr-neutral-100);
-    background-image: url(../img/systems_and_devices.jpg);
-    background-size: cover;
-    padding: 10rem 0 0;
-    max-width: 19rem;
-    max-height: 20rem;
-    border-radius: 0.5rem;
-    transition: transform 500ms ease;
-    margin-right: 5px;
+/* dit is de styling voor de cards */
+.coursecard {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    max-width: 35rem;
+    text-align: center;
+    margin: 5rem;
+    border-radius: 1.5rem;
+    padding: 3rem;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .coursecard:hover {
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.4);
+    transform: scale(1.1);
+  }
+  
+  /* Add some padding inside the card container */
 
-}
+  .courserow
+  {
+    margin: 0 -5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-.course{
-    justify-items: stretch;
-}
-
-.card-content {
-    --padding: 1.5rem;
-    padding: var(--padding);
-    background: linear-gradient(rgba(0, 4, 255, 0),
-            rgb(0, 0, 0) 30%,
-            rgb(0, 0, 0));
-    transform: translateY(65%);
-    max-width: 19rem;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-.card-title {
-    position: relative;
-    width: max-content;
-}
-
-.card-title::after {
+  .courserow::after
+  {
     content: "";
-    position: absolute;
-    height: 4px;
-    left: calc(var(--padding) * -1);
-    bottom: 0;
-    width: calc(100% + var(--padding));
-    background: rgb(42, 52, 150);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 500ms ease;
-}
-
-.card:hover .card-title::after {
-    transform: scaleX(1);
-}
+    display: flex;
+    clear: both;
+  }
+  .course.column
+  {
+    width: 25%;
+    padding: 0 10px;
+  }
 
 .button {
     cursor: pointer;
