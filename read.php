@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username =    "root";
 $password = "";
-$databasename ="proprak-login";
+$databasename = "proprak-login";
 
 $conn = mysqli_connect($servername, $username, $password, $databasename);
 
@@ -13,22 +13,22 @@ $result = mysqli_query($conn, $sql);
 
 $row = "";
 
-while($record = mysqli_fetch_assoc($result)){
+while ($record = mysqli_fetch_assoc($result)) {
 
 
-    $row .= "<tr>
+  $row .= "<tr>
                <td>{$record["id"]}</td>
                <td>{$record["username"]}</td>
                <td>{$record["password"]}</td>
                <td>
             
-               <a href='./update.php?id="  . $record["id"]  ."'>
+               <a href='./update.php?id="  . $record["id"]  . "'>
                <img src='./img/icons/pen.png' alt='pencil'>
                </a>
                </td>
 
                <td>
-               <a href='./delete.php?id="  . $record["id"]  ."'>
+               <a href='./delete.php?id="  . $record["id"]  . "'>
                <img src='./img/icons/edit.png' alt='pencil'>
                </a>
                </td>
@@ -59,29 +59,29 @@ while($record = mysqli_fetch_assoc($result)){
 <body>
 
 
-<div class="container">
+  <div class="container">
     <div class="row">
-        <div class="col-12">
+      <div class="col-12">
         <table class="table table-primary table-striped table-hover">
-<thead>
-    <tr>
-<th class="">KlantNummer</th>
-<th>Voornaam</th>
-<th>tussennaam</th>
-<th></th>
-<th></th>
+          <thead>
+            <tr>
+              <th class="">KlantNummer</th>
+              <th>Voornaam</th>
+              <th>tussennaam</th>
+              <th></th>
+              <th></th>
 
 
-</tr>
-</thead>
-<tbody>
-<?php echo $row; ?>
+            </tr>
+          </thead>
+          <tbody>
+            <?php echo $row; ?>
 
-</tbody>
-</table>
-        </div>
+          </tbody>
+        </table>
+      </div>
     </div>
-</div>
+  </div>
 
 
   <!-- Option 1: Bootstrap Bundle with Popper -->
