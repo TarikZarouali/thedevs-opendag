@@ -1,4 +1,3 @@
-
 <?php
 // Database credentials.
 define('DB_SERVER', 'localhost');

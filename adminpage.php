@@ -32,35 +32,42 @@
 </body>
 </html>
 
-
-
 <?php
 // Initialize the session
 session_start();
  
-// Check if the user is logged in, if not then redirect him to login page
+// Check if the user is logged in, otherwise redirect to login page
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: login.php");
     exit;
 }
-?>
  
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Welkom</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <div class="welkom">
-        <h1 class="my-5">Hallo, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welkom bij onze website.</h1>
-        <p>
-            <a href="reset-password.php" class="btn btn-warning">Reset je wachtwoord.</a>
-            <a href="logout.php" class="btn btn-danger ml-3">Log uit van uw account.</a>
-            <a href="adminpage.php" class="btn btn-success ml-3">Admin dashboard.</a>
-        </p>
-    </div>
-</body>
-</html>
+// Include config file
+require_once "db/config_db.php";
+ 
+try {
+    $query = "SELECT id, username, created_at FROM users";
+    $result = $pdo->query($query);
+     ?>
+     <table border="1" cellpadding="10" cellspacing="0">
+     <?php
+     $sn=1;
+     while($data = $result->fetch(PDO::FETCH_ASSOC)) {
+       
+       ?>
+        <tr>
+       <td><?php echo $sn; ?> </td>
+       <td><?php echo $data['id']; ?> </td>
+       <td><?php echo $data['username']; ?> </td>
+       <td><?php echo $data['created_at']; ?> </td>
+        </tr>
+        <?php
+      }
+      ?>
+    </table>
+      <?php
+    } catch(PDOException $e) {
+      echo "Error: " . $e->getMessage();
+    }
+
+?>
