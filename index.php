@@ -25,13 +25,19 @@
             <ul>
                 <li><a class="active" href="index.php">home</a></li>
                 <li><a href="course.html">courses</a></li>
-                <li><a href="./verdieping3.html" class="btn purple">Verdieping 3</a></li>
-                <li><a href="./verdieping4.html" class="btn purple">Verdieping 4</a></li>
+
                 <li><a href="">informatie</a>
                     <ul>
                         <li><a href="about.php">about</a></li>
                         <li><a href="contact.php">contact</a></li>
                         <li><a href="referantie.php">referantie</a></li>
+
+
+                    </ul>
+                <li><a href="">Plattegrond</a>
+                    <ul>
+                        <li><a href="./verdieping3.html" class="btn purple">Verdieping 3</a></li>
+                        <li><a href="./verdieping4.html" class="btn purple">Verdieping 4</a></li>
 
 
                     </ul>
