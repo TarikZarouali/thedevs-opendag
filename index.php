@@ -29,6 +29,9 @@
                     <ul>
                         <li><a href="about.php">about</a></li>
                         <li><a href="contact.php">contact</a></li>
+                        <li><a href="referantie.php">referantie</a></li>
+
+
                     </ul>
                 <li><a href="">registreren?</a>
                     <ul>
