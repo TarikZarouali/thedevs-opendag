@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,44 +8,44 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
+
 <body>
     <header>
         <a href="index.php" class="logo">MboUtrecht</a>
 
-     <nav>
-         <ul>
-             <li><a href="index.php">home</a></li>
-             <li><a href="course.html">courses</a></li>
-             <li><a href="">informatie</a>
-         <ul>
-             <li><a href="about.php">about</a></li>
-             <li><a href="contact.php">contact</a></li>
-        </ul>
-             <li><a href="">registreren?</a>
-         <ul>
-             <li><a href="register.php">registreer</a></li>
-             <li><a href="login.php">Login</a></li>
-        </ul>
-    </ul>
-     </nav>
- </header>
+        <nav>
+            <ul>
+                <li><a href="index.php">home</a></li>
+                <li><a href="course.html">courses</a></li>
+                <li><a href="">informatie</a>
+                    <ul>
+                        <li><a href="about.php">about</a></li>
+                        <li><a href="contact.php">contact</a></li>
+                    </ul>
+                <li><a href="">registreren?</a>
+                    <ul>
+                        <li><a href="register.php">registreer</a></li>
+                        <li><a href="login.php">Login</a></li>
+                    </ul>
+            </ul>
+        </nav>
+    </header>
 
 </body>
+
 </html>
-
-
 
 <?php
 // Initialize the session
 session_start();
  
-// Checks if the user is already logged in, if yes then redirect him to home page
+// Check if the user is already logged in, if yes then redirect him to welcome page
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
     header("location: welcome.php");
     exit;
 }
  
-// Include database config file
+// Include config file
 require_once "db/config_db.php";
  
 // Define variables and initialize with empty values
@@ -54,14 +55,14 @@ $username_err = $password_err = $login_err = "";
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
  
-    // Checks if username is empty
+    // Check if username is empty
     if(empty(trim($_POST["username"]))){
         $username_err = "Please enter username.";
     } else{
         $username = trim($_POST["username"]);
     }
     
-    // Checks if password is empty
+    // Check if password is empty
     if(empty(trim($_POST["password"]))){
         $password_err = "Please enter your password.";
     } else{
@@ -71,23 +72,25 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validate credentials
     if(empty($username_err) && empty($password_err)){
         // Prepare a select statement
-        $sql = "SELECT id, username, password FROM users WHERE username = :username";
+        $sql = "SELECT id, username, password FROM register WHERE username = ?";
         
-        if($stmt = $pdo->prepare($sql)){
+        if($stmt = $mysqli->prepare($sql)){
             // Bind variables to the prepared statement as parameters
-            $stmt->bindParam(":username", $param_username, PDO::PARAM_STR);
+            $stmt->bind_param("s", $param_username);
             
             // Set parameters
-            $param_username = trim($_POST["username"]);
+            $param_username = $username;
             
             // Attempt to execute the prepared statement
             if($stmt->execute()){
-                // Checks if username exists, if yes then verify password
-                if($stmt->rowCount() == 1){
-                    if($row = $stmt->fetch()){
-                        $id = $row["id"];
-                        $username = $row["username"];
-                        $hashed_password = $row["password"];
+                // Store result
+                $stmt->store_result();
+                
+                // Check if username exists, if yes then verify password
+                if($stmt->num_rows == 1){                    
+                    // Bind result variables
+                    $stmt->bind_result($id, $username, $hashed_password);
+                    if($stmt->fetch()){
                         if(password_verify($password, $hashed_password)){
                             // Password is correct, so start a new session
                             session_start();
@@ -98,7 +101,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["username"] = $username;                            
                             
                             // Redirect user to welcome page
-                            header("location: loggedin.php");
+                            header("location: welcome.php");
                         } else{
                             // Password is not valid, display a generic error message
                             $login_err = "Invalid username or password.";
@@ -113,16 +116,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             }
 
             // Close statement
-            unset($stmt);
+            $stmt->close();
         }
     }
     
     // Close connection
-    unset($pdo);
+    $mysqli->close();
 }
 ?>
  
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">

@@ -919,3 +919,7 @@ p.projecttext2 {
 .button-24:active {
     opacity: .5;
 }
+
+table {
+    padding-top: 6.5rem;
+}

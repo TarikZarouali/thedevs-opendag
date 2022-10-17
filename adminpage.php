@@ -32,35 +32,31 @@
 </body>
 </html>
 
-
-
 <?php
 // Initialize the session
 session_start();
  
-// Check if the user is logged in, if not then redirect him to login page
+// Check if the user is logged in, otherwise redirect to login page
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: login.php");
     exit;
 }
-?>
  
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Welkom</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <div class="welkom">
-        <h1 class="my-5">Hallo, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welkom bij onze website.</h1>
-        <p>
-            <a href="reset-password.php" class="btn btn-warning">Reset je wachtwoord.</a>
-            <a href="logout.php" class="btn btn-danger ml-3">Log uit van uw account.</a>
-            <a href="adminpage.php" class="btn btn-success ml-3">Admin dashboard.</a>
-        </p>
-    </div>
-</body>
-</html>
+// Include config file
+require_once "db/config_db.php";
+ 
+$sql = "SELECT id, username, created_at FROM register";
+$result = $mysqli->query($sql);
+
+if ($result->num_rows > 0) {
+  echo "<table><tr><th>Id</th><th>Naam</th><th>Geregistreerd op</th></tr>";
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+    echo "<tr><td>".$row["id"]."</td><td>".$row["username"]." ".$row["created_at"]."</td></tr>";
+  }
+  echo "</table>";
+} else {
+  echo "0 results";
+}
+$mysqli->close();
+?>
