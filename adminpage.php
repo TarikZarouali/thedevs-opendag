@@ -45,29 +45,18 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 // Include config file
 require_once "db/config_db.php";
  
-try {
-    $query = "SELECT id, username, created_at FROM users";
-    $result = $pdo->query($query);
-     ?>
-     <table border="1" cellpadding="10" cellspacing="0">
-     <?php
-     $sn=1;
-     while($data = $result->fetch(PDO::FETCH_ASSOC)) {
-       
-       ?>
-        <tr>
-       <td><?php echo $sn; ?> </td>
-       <td><?php echo $data['id']; ?> </td>
-       <td><?php echo $data['username']; ?> </td>
-       <td><?php echo $data['created_at']; ?> </td>
-        </tr>
-        <?php
-      }
-      ?>
-    </table>
-      <?php
-    } catch(PDOException $e) {
-      echo "Error: " . $e->getMessage();
-    }
+$sql = "SELECT id, username, created_at FROM register";
+$result = $mysqli->query($sql);
 
+if ($result->num_rows > 0) {
+  echo "<table><tr><th>Id</th><th>Naam</th><th>Geregistreerd op</th></tr>";
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+    echo "<tr><td>".$row["id"]."</td><td>".$row["username"]." ".$row["created_at"]."</td></tr>";
+  }
+  echo "</table>";
+} else {
+  echo "0 results";
+}
+$mysqli->close();
 ?>
