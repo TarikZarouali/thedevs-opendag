@@ -1,106 +1,135 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="css/style.css">
-    <title>MBO Utrecht opendag</title>
+    <link rel="stylesheet" href="css/grid.css">
+    <title>Opendag Mbo Utrecht</title>
 </head>
 
-<header>
-    <a href="index.php" class="logo">MboUtrecht</a>
-
-    <nav>
-        <ul>
-            <li><a href="index.php">home</a></li>
-            <li><a href="course.html">courses</a></li>
-            <li><a href="">informatie</a>
-                <ul>
-                    <li><a href="about.php">about</a></li>
-                    <li><a href="contact.php">contact</a></li>
-                </ul>
-            <li><a href="">registreren?</a>
-                <ul>
-                    <li><a href="register.php">registreer</a></li>
-                    <li><a href="login.php">Login</a></li>
-                </ul>
-        </ul>
-    </nav>
-</header>
-
-<body class="course">
-    <div class="course-background">
-    <h1>Choose ur course</h1>
+<body class="home">
 
 
-    <div id="coursecontainer-box">
-        <div class="coursecontainer mt-3">
-            <div class="courserow">
+    <header>
+        <a href="index.php" class="logo">MboUtrecht</a>
 
-                <!-- software dev -->
-                <div class="coursecolumn">
-                    <div class="coursecard">
-                        <img src="img/programming.png" alt="Avatar" style="width:100%">
-                        <div class="coursecard-container">
-                            <h4><b>Software Developer</b></h4>
-                            <p class="coursecard-text"> Hou je van programmeren? Droom je ervan om mee te werken aan
-                                het bouwen van websites, apps of games en daar later je beroep van te maken? Dat kan!
-                                Meld je aan bij de opleiding Software developer bij MBO Utrecht.</p>
-                            <a href="softwaredev.html" class="btn btn-primary">meer info
-                            </a>
+        <nav>
+            <ul>
+                <li><a class="active" href="index.php">home</a></li>
+                <li><a href="course.html">courses</a></li>
+
+                <li><a href="">informatie</a>
+                    <ul>
+                        <li><a href="about.php">about</a></li>
+                        <li><a href="contact.php">contact</a></li>
+                        <li><a href="referantie.php">referantie</a></li>
+
+
+                    </ul>
+                <li><a href="">Plattegrond</a>
+                    <ul>
+                        <li><a href="./verdieping3.html" class="btn purple">Verdieping 3</a></li>
+                        <li><a href="./verdieping4.html" class="btn purple">Verdieping 4</a></li>
+
+
+                    </ul>
+                <li><a href="">registreren?</a>
+                    <ul>
+                        <li><a href="register.php">registreer</a></li>
+                        <li><a href="login.php">Login</a></li>
+                    </ul>
+            </ul>
+        </nav>
+    </header>
+
+    <body class="course">
+        <div class="course-background">
+            <h1>Choose ur course</h1>
+
+
+            <div id="coursecontainer-box">
+                <div class="coursecontainer mt-3">
+                    <div class="courserow">
+
+                        <!-- software dev -->
+                        <div class="coursecolumn">
+                            <div class="coursecard">
+                                <img src="img/programming.png" alt="Avatar" style="width:100%">
+                                <div class="coursecard-container">
+                                    <h4><b>Software Developer</b></h4>
+                                    <p class="coursecard-text"> Hou je van programmeren? Droom je ervan om mee te werken
+                                        aan
+                                        het bouwen van websites, apps of games en daar later je beroep van te maken? Dat
+                                        kan!
+                                        Meld je aan bij de opleiding Software developer bij MBO Utrecht.</p>
+                                    <a href="softwaredev.html" class="btn btn-primary">meer info
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
 
-                <!-- ict sup -->
-                <div class="coursecolumn">
-                    <div class="coursecard">
-                        <img src="img/support.jpg" alt="Avatar" style="width:100%">
-                        <div class="coursecard-container">
-                            <h4><b>Medewerker ICT support</b></h4>
-                            <p class="coursecard-text"> Wil jij alles leren over netwerken, computers, elektra en
-                                domotica? Vind je het leuk om mensen te helpen bij het oplossen van hun ICT-problemen?
-                                Meld je dan aan voor de opleiding Medewerker ICT bij MBO Utrecht.</p>
-                            <a href="suppict.html" class="btn btn-primary">meer info
-                            </a>
+                        <!-- ict sup -->
+                        <div class="coursecolumn">
+                            <div class="coursecard">
+                                <img src="img/support.jpg" alt="Avatar" style="width:100%">
+                                <div class="coursecard-container">
+                                    <h4><b>Medewerker ICT support</b></h4>
+                                    <p class="coursecard-text"> Wil jij alles leren over netwerken, computers, elektra
+                                        en
+                                        domotica? Vind je het leuk om mensen te helpen bij het oplossen van hun
+                                        ICT-problemen?
+                                        Meld je dan aan voor de opleiding Medewerker ICT bij MBO Utrecht.</p>
+                                    <a href="suppict.html" class="btn btn-primary">meer info
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
 
-                <!-- expert it -->
-                <div class="coursecolumn">
-                    <div class="coursecard">
-                        <img src="img/expert.jpg" alt="Avatar" style="width:100%">
-                        <div class="coursecard-container">
-                            <h4><b>Expert IT systems and devices</b></h4>
-                            <p class="coursecard-text"> Ben jij niet bang voor (complexe) computerproblemen en zie je
-                                het als een uitdaging om deze op te lossen? Houd je ervan om samen te werken en mensen
-                                verder te helpen als ze een ICT-vraag hebben? Dan is de opleiding Expert IT systems and
-                                devices misschien wel wat voor jou!</p>
-                            <a href="expertit.html" class="btn btn-primary">meer info
-                            </a>
+                        <!-- expert it -->
+                        <div class="coursecolumn">
+                            <div class="coursecard">
+                                <img src="img/expert.jpg" alt="Avatar" style="width:100%">
+                                <div class="coursecard-container">
+                                    <h4><b>Expert IT systems and devices</b></h4>
+                                    <p class="coursecard-text"> Ben jij niet bang voor (complexe) computerproblemen en
+                                        zie je
+                                        het als een uitdaging om deze op te lossen? Houd je ervan om samen te werken en
+                                        mensen
+                                        verder te helpen als ze een ICT-vraag hebben? Dan is de opleiding Expert IT
+                                        systems and
+                                        devices misschien wel wat voor jou!</p>
+                                    <a href="expertit.html" class="btn btn-primary">meer info
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
 
-                <!-- allround ict -->
-                <div class="coursecolumn">
-                    <div class="coursecard">
-                        <img src="img/allround.png" alt="Avatar" style="width:100%">
-                        <div class="coursecard-container">
-                            <h4><b>Allround medewerker ict systems and devices</b></h4>
-                            <p class="coursecard-text"> Ben je bereid om mensen te helpen met hun computerproblemen?
-                                Lijkt het je leuk om te leren hoe je netwerken moet aanleggen en hardware kan
-                                installeren, configureren en beheren? Dan is de opleiding Allround medewerker IT systems
-                                and devices misschien wel wat voor jou!</p>
-                            <a href="itsystemsnddevice.html" class="btn btn-primary">meer info
-                            </a>
+                        <!-- allround ict -->
+                        <div class="coursecolumn">
+                            <div class="coursecard">
+                                <img src="img/allround.png" alt="Avatar" style="width:100%">
+                                <div class="coursecard-container">
+                                    <h4><b>Allround medewerker ict systems and devices</b></h4>
+                                    <p class="coursecard-text"> Ben je bereid om mensen te helpen met hun
+                                        computerproblemen?
+                                        Lijkt het je leuk om te leren hoe je netwerken moet aanleggen en hardware kan
+                                        installeren, configureren en beheren? Dan is de opleiding Allround medewerker IT
+                                        systems
+                                        and devices misschien wel wat voor jou!</p>
+                                    <a href="itsystemsnddevice.html" class="btn btn-primary">meer info
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
 
-</body>
+    </body>
 
 </html>

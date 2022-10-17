@@ -55,8 +55,6 @@
     <div id="section-landing">
         <div class="wrapper-landing">
             <h3 class="animate-charcter">MBO Utrecht</h3>
-            <button class="button-24" role="button">Button 24</button>
-            <button class="button-24" role="button">Button 24</button>
 
 
         </div>
