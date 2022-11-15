@@ -10,6 +10,7 @@
     <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/grid.css">
     <title>Opendag Mbo Utrecht</title>
@@ -19,6 +20,7 @@
     <script src="https://kit.fontawesome.com/4393ca507d.js" crossorigin="anonymous"></script>
     <div class="wrapper">
         <div class="navbar">
+
             <ul>
                 <li><a href="index.php" class="a_parent">
                         <div class="wrap">
@@ -144,10 +146,18 @@
             <!-- HTML !-->
             <button class="button-69" role="button">Geef het op!</button>
 
-
-
-
+            <div class="media-icons">
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-youtube"></i></a>
+                <a href=""><i class="fa fa-instagram"></i></a>
+                <a href=""><i class="fa fa-twitter "></i></a>
+            </div>
+            <div class="rechten">
+                <p>Disclaimer - Privacy statement Alle rechten voorbehouden</p>
+                <p>©2022 Gemaakt door MBO Utrecht team</p>
+            </div>
         </div>
+
     </div>
 
 
