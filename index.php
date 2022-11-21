@@ -22,7 +22,7 @@
         <div class="navbar">
 
             <ul>
-                <li><a href="index.php" class="a_parent">
+                <li><a href="index.php" class="a_parent active">
                         <div class="wrap">
                             <span class="icon">
                                 <i class="fas fa-home" aria-hidden="true"></i>
@@ -144,7 +144,7 @@
         <div class="wrapper-landing">
             <h3 class="animate-charcter">MBO Utrecht</h3>
             <!-- HTML !-->
-            <button class="button-69" role="button">Geef het op!</button>
+            <button class="button-69" role="button">GEEF JE HIER OP!</button>
 
             <div class="media-icons">
                 <a href=""><i class="fa fa-facebook"></i></a>
@@ -153,7 +153,7 @@
                 <a href=""><i class="fa fa-twitter "></i></a>
             </div>
             <div class="rechten">
-                <p>Disclaimer - Privacy statement Alle rechten voorbehouden</p>
+                <p> <a href="https://www.mboutrecht.nl/disclaimer/">Disclaimer</a> <a href="https://www.mboutrecht.nl/privacybeleid/">Privacy statement </a>Alle rechten voorbehouden</p>
                 <p>©2022 Gemaakt door MBO Utrecht team</p>
             </div>
         </div>
