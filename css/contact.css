@@ -1,5 +1,10 @@
+section{
+    margin-top: 8rem;
+}
+
 div.elem-group {
-    margin: 40px 0;
+    margin: 25px 0;
+    
 }
 
 label {
@@ -7,6 +12,7 @@ label {
     font-family: 'Aleo';
     padding-bottom: 4px;
     font-size: 1.25em;
+    margin-left: 33%;
 }
 
 input,
@@ -19,23 +25,30 @@ textarea {
     font-family: 'Aleo';
     width: 500px;
     padding: 8px;
+    margin-left: 33%;
 }
 
 textarea {
     height: 250px;
+    align-content: center;
 }
 
 button {
     height: 50px;
-    background: green;
+    width: 500px;
+    background: #0080BE;
     color: white;
-    border: 2px solid darkgreen;
+    border: 2px solid grey;
     font-size: 1.25em;
     font-family: 'Aleo';
     border-radius: 4px;
     cursor: pointer;
+    margin-left: 33%;
 }
 
 button:hover {
     border: 2px solid black;
 }
+
+
+

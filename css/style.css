@@ -744,9 +744,7 @@ p.projecttext2 {
     margin-top: 5rem;
 }
 
-.contact_form {
-    margin-top: 20rem;
-}
+
 
 .course-background {
     background: linear-gradient(-45deg, #fff, #00639C);
@@ -824,7 +822,7 @@ p.projecttext2 {
     right: 0;
     top: 0;
     transform-origin: center;
-    trsnsform: scale(1) translateZ(0);
+    transform: scale(1) translateZ(0);
     transition:
         filter 200ms linear,
         transform 200ms linear;
@@ -922,4 +920,14 @@ p.projecttext2 {
 
 table {
     padding-top: 6.5rem;
+}
+
+.contact-bg{
+    background: rgba(0, 0, 0, 0.5)url('../img/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+    height: 100%;
+    width: 100%;
 }
