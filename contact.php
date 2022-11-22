@@ -50,7 +50,9 @@
         </nav>
     </header>
 
+    
 
+<section class="contact-bg">
     <form action="contact.php" method="post" class="contact_form">
         <div class="elem-group">
             <label for="name">Your Name</label>
@@ -79,8 +81,9 @@
         </div>
         <button type="submit">Send Message</button>
     </form>
+    </section>
     <style>
-        <?php include 'CSS/main.css'; ?>
+        <?php include 'CSS/contact.css'; ?>
     </style>
 </body>
 

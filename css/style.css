@@ -232,7 +232,7 @@ h1 {
     background-size: 200% auto;
     color: #fff;
     background-clip: text;
-    text-fill-color: transparent;
+    color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: textclip 7s linear infinite;
@@ -727,9 +727,7 @@ p.projecttext2 {
     margin-top: 5rem;
 }
 
-.contact_form {
-    margin-top: 20rem;
-}
+
 
 .course-background {
     background: linear-gradient(-45deg, #fff, #00639C);
@@ -807,8 +805,10 @@ p.projecttext2 {
     right: 0;
     top: 0;
     transform-origin: center;
-    trsnsform: scale(1) translateZ(0);
-    transition: filter 200ms linear, transform 200ms linear;
+    transform: scale(1) translateZ(0);
+    transition:
+        filter 200ms linear,
+        transform 200ms linear;
 }
 
 .card:hover .card__background {
@@ -940,4 +940,14 @@ table {
         line-height: 55px;
         width: 150px;
     }
+}
+
+.contact-bg {
+    background: rgba(0, 0, 0, 0.5)url('../img/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+    height: 100%;
+    width: 100%;
 }
