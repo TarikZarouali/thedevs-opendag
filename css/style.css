@@ -38,41 +38,11 @@ h4 {
     font-family: 'Merriweather', serif;
 }
 
-
-.accordion {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    text-align: left;
-    border: none;
-    outline: none;
-    transition: 0.4s;
-  }
-  
-  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-  .active, .accordion:hover {
-    background-color: #ccc;
-  }
-  
-  /* Style the accordion panel. Note: hidden by default */
-  .panel {
-    padding: 0 18px;
-    background-color: white;
-    display: none;
-    overflow: hidden;
-  }
-  
 body.course {
     min-height: 100vh;
     line-height: 1.6;
     font-family: monospace;
     justify-items: center;
-}
-
-.about{
-    background-color: #000;
 }
 
 h1 {
@@ -232,6 +202,26 @@ h1 {
     margin: 0 auto;
     width: 100%;
     top: 40%;
+}
+
+.wrapper-landing .rechten {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    margin-top: 20rem;
+}
+
+.wrapper-landing .rechten p {
+    color: rgba(255, 255, 255, 0.493);
+}
+
+.wrapper-landing .rechten a {
+    color: #ffff;
+}
+
+.wrapper-landing .rechten a:hover {
+    color: #0d70ea;
+    transition: all 0.9s ease;
 }
 
 .animate-charcter {
