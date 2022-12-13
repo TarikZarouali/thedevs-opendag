@@ -738,6 +738,21 @@ p.projecttext2 {
   margin: 0;
 }
 
+
+.course-background .course-title {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  position: relative;
+}
+
+.course-background .course-title h1 {
+  margin-top: 5rem;
+  font-size: 4rem;
+}
+
+
+
 @keyframes gradient {
   0% {
     background-position: 0% 50%;

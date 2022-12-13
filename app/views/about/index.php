@@ -30,9 +30,11 @@ require_once APPROOT . '/Views/Includes/head.php';
 </div>
 </body>
 
-<?php
-require_once APPROOT . '/Views/Includes/footer.php';
-?>
+<footer>
+    <?php
+    require_once APPROOT . '/Views/Includes/footer.php';
+    ?>
+</footer>
 
 <script src="/js/script.js"></script>
 
