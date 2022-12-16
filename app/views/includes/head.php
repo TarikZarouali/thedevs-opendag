@@ -64,26 +64,6 @@
 
                             </li>
                             <li>
-                                <a href="contact.php" class="dd_menu_a">
-                                    <div class="wrap">
-                                        <span class="icon">
-                                            <i class="fa-regular fa-address-card" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="text">Contact</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="referantie.php" class="dd_menu_a">
-                                    <div class="wrap">
-                                        <span class="icon">
-                                            <i class="fa-thin fa-question" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="text">vragen</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
 
                             </li>
                         </ul>
@@ -139,7 +119,7 @@
                     <a href="<?= URLROOT; ?>register">
                         <li>Sign Up</li>
                     </a>
-                    <a href="login.php">
+                    <a href="<?= URLROOT; ?>login">
                         <li>Login</li>
                     </a>
                 <?php else : ?>
