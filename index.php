@@ -152,10 +152,6 @@
                 <a href=""><i class="fa fa-instagram"></i></a>
                 <a href=""><i class="fa fa-twitter "></i></a>
             </div>
-            <div class="rechten">
-                <p> <a href="https://www.mboutrecht.nl/disclaimer/">Disclaimer</a> <a href="https://www.mboutrecht.nl/privacybeleid/">Privacy statement </a>Alle rechten voorbehouden</p>
-                <p>©2022 Gemaakt door MBO Utrecht team</p>
-            </div>
         </div>
 
     </div>
